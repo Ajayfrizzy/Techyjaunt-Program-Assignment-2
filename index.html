@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Assignment 2</title>
+  </head>
+  <body>
+    <nav class="responsive-nav" role="navigation" aria-label="Main Navigation">
+      <div
+        class="menu-toggle"
+        aria-controls="menu"
+        aria-expanded="false"
+        aria-label="Toggle Navigation"
+      >
+        <span class="hide-toggle" onclick="toggleMenu()">&#9776;</span>
+        <span class="hide" onclick="hideMenu()">X</span>
+      </div>
+      <ul id="menu" role="menu">
+        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+        <li role="none"><a href="about.html" role="menuitem">About</a></li>
+        <li role="none">
+          <a href="services.html" role="menuitem">Services</a>
+        </li>
+        <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector("#menu");
+        const hide = document.querySelector(".hide");
+        const hideToggle = document.querySelector(".hide-toggle");
+        menu.style.display = "block";
+        hideToggle.style.display = "none";
+        hide.style.display = "flex";
+      }
+
+      function hideMenu() {
+        const menu = document.querySelector("#menu");
+        const hideToggle = document.querySelector(".hide-toggle");
+        const hide = document.querySelector(".hide");
+        menu.style.display = "none";
+        hideToggle.style.display = "block";
+        hide.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
